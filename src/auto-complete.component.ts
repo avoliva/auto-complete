@@ -46,6 +46,9 @@ import { NguiAutoComplete } from "./auto-complete";
           [ngClass]="{selected: i === itemIndex}"
           [innerHtml]="autoComplete.getFormattedListItem(item)">
       </li>
+      <li *ngIf="addToSource"
+          (mousedown)="onAdd()"
+          class="add-source">{{addToSource}}</li>
     </ul>
 
   </div>`,
@@ -124,8 +127,10 @@ export class NguiAutoCompleteComponent implements OnInit {
   @Input("show-dropdown-on-init") showDropdownOnInit: boolean = false;
   @Input("tab-to-select") tabToSelect: boolean = true;
   @Input("match-formatted") matchFormatted: boolean = false;
+  @Input("add-to-source") addToSource: string;
 
   @Output() valueSelected = new EventEmitter();
+  @Output() valueAdded = new EventEmitter();
   @ViewChild('autoCompleteInput') autoCompleteInput: ElementRef;
   @ViewChild('autoCompleteContainer') autoCompleteContainer: ElementRef;
 
@@ -249,6 +254,10 @@ export class NguiAutoCompleteComponent implements OnInit {
 
   selectOne(data: any) {
     this.valueSelected.emit(data);
+  };
+
+  onAdd(): void {
+    this.valueAdded.emit();
   };
 
   inputElKeyHandler = (evt: any) => {

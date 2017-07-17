@@ -26,7 +26,9 @@ export declare class NguiAutoCompleteComponent implements OnInit {
     showDropdownOnInit: boolean;
     tabToSelect: boolean;
     matchFormatted: boolean;
+    addToSource: string;
     valueSelected: EventEmitter<{}>;
+    valueAdded: EventEmitter<{}>;
     autoCompleteInput: ElementRef;
     autoCompleteContainer: ElementRef;
     el: HTMLElement;
@@ -51,6 +53,7 @@ export declare class NguiAutoCompleteComponent implements OnInit {
     findItemFromSelectValue(selectText: string): any;
     reloadList(keyword: string): void;
     selectOne(data: any): void;
+    onAdd(): void;
     inputElKeyHandler: (evt: any) => void;
     scrollToView(index: any): void;
     readonly emptyList: boolean;

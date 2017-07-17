@@ -37,15 +37,15 @@ import { NguiAutoComplete } from "./auto-complete";
       <li *ngIf="minCharsEntered && !isLoading && !filteredList.length"
            (mousedown)="selectOne('')"
            class="no-match-found">{{noMatchFoundText || 'No Result Found'}}</li>
-      <li *ngIf="blankOptionText && filteredList.length"
-          (mousedown)="selectOne('')"
-          class="blank-item">{{blankOptionText}}</li>
       <li class="item"
           *ngFor="let item of filteredList; let i=index"
           (mousedown)="selectOne(item)"
           [ngClass]="{selected: i === itemIndex}"
           [innerHtml]="autoComplete.getFormattedListItem(item)">
       </li>
+      <li *ngIf="blankOptionText && filteredList.length"
+          (mousedown)="selectOne('addIngredient')"
+          class="blank-item">{{blankOptionText}}</li>
       <li *ngIf="addToSource"
           (mousedown)="onAdd()"
           class="add-source">{{addToSource}}</li>

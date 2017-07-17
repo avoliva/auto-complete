@@ -505,6 +505,7 @@ var NguiAutoCompleteDirective = (function () {
         this.zIndex = "1";
         this.ngModelChange = new core_1.EventEmitter();
         this.valueChanged = new core_1.EventEmitter();
+        this.valueAdded = new core_1.EventEmitter();
         //show auto-complete list below the current element
         this.showAutoCompleteDropdown = function (event) {
             _this.hideAutoCompleteDropdown();
@@ -807,6 +808,10 @@ var NguiAutoCompleteDirective = (function () {
         core_1.Output(), 
         __metadata('design:type', Object)
     ], NguiAutoCompleteDirective.prototype, "valueChanged", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], NguiAutoCompleteDirective.prototype, "valueAdded", void 0);
     NguiAutoCompleteDirective = __decorate([
         core_1.Directive({
             selector: "[auto-complete], [ngui-auto-complete]"

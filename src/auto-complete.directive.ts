@@ -52,6 +52,7 @@ export class NguiAutoCompleteDirective implements OnInit, OnChanges {
 
   @Output() ngModelChange = new EventEmitter();
   @Output() valueChanged = new EventEmitter();
+  @Output() valueAdded = new EventEmitter();
 
 
   componentRef: ComponentRef<NguiAutoCompleteComponent>;

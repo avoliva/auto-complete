@@ -19,6 +19,7 @@ var NguiAutoCompleteDirective = (function () {
         this.zIndex = "1";
         this.ngModelChange = new core_1.EventEmitter();
         this.valueChanged = new core_1.EventEmitter();
+        this.valueAdded = new core_1.EventEmitter();
         //show auto-complete list below the current element
         this.showAutoCompleteDropdown = function (event) {
             _this.hideAutoCompleteDropdown();
@@ -265,6 +266,7 @@ var NguiAutoCompleteDirective = (function () {
         'zIndex': [{ type: core_1.Input, args: ["z-index",] },],
         'ngModelChange': [{ type: core_1.Output },],
         'valueChanged': [{ type: core_1.Output },],
+        'valueAdded': [{ type: core_1.Output },],
     };
     return NguiAutoCompleteDirective;
 }());

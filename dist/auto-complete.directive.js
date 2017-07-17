@@ -50,6 +50,7 @@ var NguiAutoCompleteDirective = (function () {
             component.loadingTemplate = _this.loadingTemplate;
             component.listFormatter = _this.listFormatter;
             component.blankOptionText = _this.blankOptionText;
+            component.addToSource = _this.addToSource;
             component.noMatchFoundText = _this.noMatchFoundText;
             component.tabToSelect = _this.tabToSelect;
             component.matchFormatted = _this.matchFormatted;
@@ -308,6 +309,10 @@ __decorate([
     __metadata("design:type", Boolean)
 ], NguiAutoCompleteDirective.prototype, "matchFormatted", void 0);
 __decorate([
+    core_1.Input("add-to-source"),
+    __metadata("design:type", String)
+], NguiAutoCompleteDirective.prototype, "addToSource", void 0);
+__decorate([
     core_1.Input(),
     __metadata("design:type", String)
 ], NguiAutoCompleteDirective.prototype, "ngModel", void 0);
@@ -317,7 +322,7 @@ __decorate([
 ], NguiAutoCompleteDirective.prototype, "formControlName", void 0);
 __decorate([
     core_1.Input('formControl'),
-    __metadata("design:type", typeof (_a = typeof forms_1.FormControl !== "undefined" && forms_1.FormControl) === "function" && _a || Object)
+    __metadata("design:type", forms_1.FormControl)
 ], NguiAutoCompleteDirective.prototype, "extFormControl", void 0);
 __decorate([
     core_1.Input("z-index"),
@@ -336,8 +341,10 @@ NguiAutoCompleteDirective = __decorate([
         selector: "[auto-complete], [ngui-auto-complete]"
     }),
     __param(3, core_1.Optional()), __param(3, core_1.Host()), __param(3, core_1.SkipSelf()),
-    __metadata("design:paramtypes", [typeof (_b = typeof core_1.ComponentFactoryResolver !== "undefined" && core_1.ComponentFactoryResolver) === "function" && _b || Object, typeof (_c = typeof core_1.Renderer !== "undefined" && core_1.Renderer) === "function" && _c || Object, typeof (_d = typeof core_1.ViewContainerRef !== "undefined" && core_1.ViewContainerRef) === "function" && _d || Object, typeof (_e = typeof forms_1.ControlContainer !== "undefined" && forms_1.ControlContainer) === "function" && _e || Object])
+    __metadata("design:paramtypes", [core_1.ComponentFactoryResolver,
+        core_1.Renderer,
+        core_1.ViewContainerRef,
+        forms_1.ControlContainer])
 ], NguiAutoCompleteDirective);
 exports.NguiAutoCompleteDirective = NguiAutoCompleteDirective;
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=auto-complete.directive.js.map

@@ -86,8 +86,7 @@ var NguiAutoComplete = (function () {
 NguiAutoComplete = __decorate([
     core_1.Injectable(),
     __param(0, core_1.Optional()),
-    __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object])
+    __metadata("design:paramtypes", [http_1.Http])
 ], NguiAutoComplete);
 exports.NguiAutoComplete = NguiAutoComplete;
-var _a;
 //# sourceMappingURL=auto-complete.js.map

@@ -52,6 +52,9 @@ var NguiAutoCompleteComponent = (function () {
                     if (_this.filteredList.length > 0) {
                         _this.selectOne(_this.filteredList[_this.itemIndex]);
                     }
+                    else {
+                        _this.selectOne('addIngredient');
+                    }
                     evt.preventDefault();
                     break;
                 case 9:

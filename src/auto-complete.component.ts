@@ -281,6 +281,8 @@ export class NguiAutoCompleteComponent implements OnInit {
       case 13: // ENTER, choose it!!
         if (this.filteredList.length > 0) {
           this.selectOne(this.filteredList[this.itemIndex]);
+        } else {
+          this.selectOne('addIngredient');
         }
         evt.preventDefault();
         break;

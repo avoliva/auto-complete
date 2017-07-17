@@ -232,7 +232,7 @@ export class NguiAutoCompleteDirective implements OnInit, OnChanges {
       if (closeToBottom) {
         this.acDropdownEl.style.bottom = `${thisInputElBCR.height}px`;
       } else {
-        this.acDropdownEl.style.top = `${thisInputElBCR.height}px`;
+        this.acDropdownEl.style.top = `${thisInputElBCR.height + 16}px`;
       }
     }
   };

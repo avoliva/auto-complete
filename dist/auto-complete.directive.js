@@ -90,7 +90,7 @@ var NguiAutoCompleteDirective = (function () {
                     _this.acDropdownEl.style.bottom = thisInputElBCR.height + "px";
                 }
                 else {
-                    _this.acDropdownEl.style.top = thisInputElBCR.height + "px";
+                    _this.acDropdownEl.style.top = (thisInputElBCR.height + 16) + "px";
                 }
             }
         };

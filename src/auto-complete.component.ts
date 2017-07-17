@@ -43,7 +43,7 @@ import { NguiAutoComplete } from "./auto-complete";
           [ngClass]="{selected: i === itemIndex}"
           [innerHtml]="autoComplete.getFormattedListItem(item)">
       </li>
-      <li *ngIf="blankOptionText && filteredList.length"
+      <li *ngIf="blankOptionText"
           (mousedown)="selectOne('addIngredient')"
           class="blank-item">{{blankOptionText}}</li>
       <li *ngIf="addToSource"
